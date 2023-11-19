@@ -12,9 +12,10 @@ public class ActionsPOCTest {
   public void ActionsPOC() throws InterruptedException {
 	    System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("https://enterpriseportal.qa.onbe.dev");
+		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
+		System.out.println("Added one commit for run");
 		driver.close();
   }
 }
