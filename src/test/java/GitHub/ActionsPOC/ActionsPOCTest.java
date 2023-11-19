@@ -15,7 +15,8 @@ public class ActionsPOCTest {
 		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
-		System.out.println("Added one commit for run");
+		System.out.println("Added one commit for run1");
+		System.out.println("Added one commit for run1");
 		driver.close();
   }
 }
