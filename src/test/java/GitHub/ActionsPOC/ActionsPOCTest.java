@@ -13,7 +13,7 @@ public class ActionsPOCTest {
   public void ActionsPOC() throws InterruptedException {
 	    //System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 	  	ChromeOptions co = new ChromeOptions();
-	  	co.setBrowserVersion("beta");
+	  	co.setBrowserVersion("120");
 		driver = new ChromeDriver(co);
 		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
