@@ -2,6 +2,7 @@ package GitHub.ActionsPOC;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 public class ActionsPOCTest {
@@ -10,8 +11,10 @@ public class ActionsPOCTest {
 	
   @Test
   public void ActionsPOC() throws InterruptedException {
-	    System.setProperty("webdriver.chrome.driver", "/driver/chromedriver.exe");
-		driver = new ChromeDriver();
+	    //System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+	  	ChromeOptions co = new ChromeOptions();
+	  	co.setBrowserVersion("119");
+		driver = new ChromeDriver(co);
 		driver.get("https://www.google.com");
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
