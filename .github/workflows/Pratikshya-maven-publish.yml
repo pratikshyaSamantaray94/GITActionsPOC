@@ -11,4 +11,4 @@ jobs:
 
     steps:
     - name: Pratikshya Steps check
-      run: mvn -B package --file pom.xml
+      run: mvn clean test -DXmlFile=testng.xml
