@@ -27,8 +27,10 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     
-    - name: Install Maven
-      run: mvn install
-    - name: Test with Maven
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+    - name: run testng xml file
+      run: mvn -B package --file testng.xml
+    - name: Added Goal  
       run: mvn --batch-mode --update-snapshots verify
       
