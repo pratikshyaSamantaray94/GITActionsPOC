@@ -12,6 +12,7 @@ public class ActionsPOCTest {
   @Test
   public void ActionsPOC() throws InterruptedException {
 	    //System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+	  	WebDriverManager.chromedriver().setup();
 	  	ChromeOptions co = new ChromeOptions();
 	  	//co.setBrowserVersion("118");
 		driver = new ChromeDriver(co);
