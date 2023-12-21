@@ -25,10 +25,21 @@ public class ActionsPOCTest {
 
   @Test
   public void NewTestActionsPOC() throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
+		/*WebDriverManager.chromedriver().setup();
 		String baseUrl = "https://www.google.com";
         System.out.println("Launching Google Chrome browser"); 
         driver = new ChromeDriver();
+        driver.get(baseUrl);
+        String testTitle = "Free QA Automation Tools For Everyone";
+        String originalTitle = driver.getTitle();
+        driver.close();*/
+	    String baseUrl = "https://www.google.com";
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--ignore-ssl-errors=yes");
+        options.addArguments("--ignore-certificate-errors");
+        options.setBrowserVersion("119");
+        driver = new ChromeDriver(options);
         driver.get(baseUrl);
         String testTitle = "Free QA Automation Tools For Everyone";
         String originalTitle = driver.getTitle();
