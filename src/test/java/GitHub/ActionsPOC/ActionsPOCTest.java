@@ -47,6 +47,7 @@ public class ActionsPOCTest {
         options.addArguments("--disable-gpu"); // applicable to windows os only
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
         options.addArguments("--no-sandbox"); // Bypass OS security model
+        options.addArguments("--remote-debugging-port=9222");
         //WebDriver driver = new ChromeDriver(options);
         driver = new ChromeDriver(options);
         driver.get(baseUrl);
