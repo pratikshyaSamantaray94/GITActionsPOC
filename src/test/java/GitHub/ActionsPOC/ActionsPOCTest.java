@@ -34,11 +34,20 @@ public class ActionsPOCTest {
         String originalTitle = driver.getTitle();
         driver.close();*/
 	    String baseUrl = "https://www.google.com";
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("--disable-dev-shm-usage");
+//        options.addArguments("--ignore-ssl-errors=yes");
+//        options.addArguments("--ignore-certificate-errors");
+//        options.setBrowserVersion("119");
+        
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--ignore-ssl-errors=yes");
-        options.addArguments("--ignore-certificate-errors");
-        options.setBrowserVersion("119");
+        options.addArguments("start-maximized"); // open Browser in maximized mode
+        options.addArguments("disable-infobars"); // disabling infobars
+        options.addArguments("--disable-extensions"); // disabling extensions
+        options.addArguments("--disable-gpu"); // applicable to windows os only
+        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+        options.addArguments("--no-sandbox"); // Bypass OS security model
+        //WebDriver driver = new ChromeDriver(options);
         driver = new ChromeDriver(options);
         driver.get(baseUrl);
         String testTitle = "Free QA Automation Tools For Everyone";
