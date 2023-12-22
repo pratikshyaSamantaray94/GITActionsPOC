@@ -24,7 +24,7 @@ public class ActionsPOCTest {
 	 */
 
   @Test
-  public void NewTestActionsPOC() throws InterruptedException {
+  public void MethodForGitHubAction() throws InterruptedException {
 		/*WebDriverManager.chromedriver().setup();
 		String baseUrl = "https://www.google.com";
         System.out.println("Launching Google Chrome browser"); 
