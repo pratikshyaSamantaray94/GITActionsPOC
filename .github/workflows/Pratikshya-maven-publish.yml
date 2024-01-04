@@ -25,11 +25,9 @@ jobs:
         distribution: 'temurin'
 
     - name: set up env variables
-      run:    
-         setx BROWSERSTACK_USERNAME "sulagnachakrabor_hF8bLJ"
-         setx BROWSERSTACK_ACCESS_KEY "1bt4ji6nzS6ALopzMHZq"
-         set BROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ
-         set BROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq    
+      run: |   
+          echo "My variable value: $BROWSERSTACK_USERNAME"
+          echo "Another variable value: $BROWSERSTACK_ACCESS_KEY"   
          
     - name: Build with Maven
       run:  mvn --batch-mode --update-snapshots verify
