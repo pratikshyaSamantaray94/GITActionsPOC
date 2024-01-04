@@ -61,11 +61,11 @@
            <version>5.6.2</version>
         </dependency>	
     <!-- https://mvnrepository.com/artifact/com.browserstack/browserstack-java-sdk -->
-<!-- 	<dependency>
+ 	<dependency>
 	    <groupId>com.browserstack</groupId>
 	    <artifactId>browserstack-java-sdk</artifactId>
 	    <version>1.12.3</version>
-	</dependency> -->
+	</dependency> 
         
         
   </dependencies>
