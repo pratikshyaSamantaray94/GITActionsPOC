@@ -23,7 +23,15 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-        
-    - name: Build with Maven
-      run:  mvn --batch-mode --update-snapshots verify
-      
+
+    - name: set up env variables
+      run: |
+          echo "BROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ" >> $GITHUB_ENV
+          echo "BROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq" >> $GITHUB_ENV
+          
+    - name: adding sdk
+      run: |
+            mvn archetype:generate -B -DarchetypeGroupId=com.browserstack -DarchetypeArtifactId=testng-archetype-integrate -DarchetypeVersion=1.2 -DgroupId=com.browserstack -DartifactId=testng-archetype-integrate -Dversion=1.2 -DBROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ -DBROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq
+  
+    - name: Run with Maven
+      run: mvn test -P sample-test
