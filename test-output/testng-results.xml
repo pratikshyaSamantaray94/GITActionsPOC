@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="10048" started-at="2023-11-17T09:36:53Z" finished-at="2023-11-17T09:37:04Z">
+  <suite name="Default suite" duration-ms="14611" started-at="2023-12-22T12:33:52Z" finished-at="2023-12-22T12:34:07Z">
     <groups>
     </groups>
-    <test name="POCxml" duration-ms="10048" started-at="2023-11-17T09:36:53Z" finished-at="2023-11-17T09:37:04Z">
+    <test name="Default test" duration-ms="14611" started-at="2023-12-22T12:33:52Z" finished-at="2023-12-22T12:34:07Z">
       <class name="GitHub.ActionsPOC.ActionsPOCTest">
-        <test-method status="PASS" signature="ActionsPOC()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest@9629756]" name="ActionsPOC" duration-ms="10037" started-at="2023-11-17T15:06:53Z" finished-at="2023-11-17T15:07:04Z">
+        <test-method status="PASS" signature="NewTestActionsPOC()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest@5f2108b5]" name="NewTestActionsPOC" duration-ms="14584" started-at="2023-12-22T18:03:52Z" finished-at="2023-12-22T18:04:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ActionsPOC -->
+        </test-method> <!-- NewTestActionsPOC -->
       </class> <!-- GitHub.ActionsPOC.ActionsPOCTest -->
-    </test> <!-- POCxml -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

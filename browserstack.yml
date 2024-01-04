@@ -1,0 +1,7 @@
+username: aravindankaivall_PNYOyz
+accessKey: 2BLy51auFkVfaKgDv6jk
+buildName: "Test Run"
+projectname: "TestNg-BrowserStack-Jira-Integration"
+franework: testng
+browserstackAutomation: false
+testObservabality: true
