@@ -30,4 +30,4 @@ jobs:
           echo "BROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq" >> $GITHUB_ENV
          
     - name: Run with Maven
-      run:  mvn --batch-mode --update-snapshots verify
+      run: mvn test -P sample-test
