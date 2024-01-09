@@ -4,9 +4,11 @@
 name: Pratikshya Maven Package
 
 on:
-  workflow_dispatch:
-  push:
-    branches: ["master"]
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  
 
 jobs:
   build:
