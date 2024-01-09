@@ -1,0 +1,29 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Sulagna Maven TestNG project
+
+on: push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK 11
+      uses: actions/checkout@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+
+    - name: set up env variables
+      run: |
+          echo "BROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ" >> $GITHUB_ENV
+          echo "BROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq" >> $GITHUB_ENV
+    - name: adding sdk
+      run: |
+          mvn archetype:generate -B -DarchetypeGroupId=com.browserstack -DarchetypeArtifactId=testng-archetype-integrate -DarchetypeVersion=1.2 -DgroupId=com.browserstack -DartifactId=testng-archetype-integrate -Dversion=1.2 -DBROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ -DBROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq
+    - name: Run with Maven
+      run: mvn test
