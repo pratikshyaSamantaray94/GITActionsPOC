@@ -30,6 +30,6 @@ jobs:
           echo "BROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq" >> $GITHUB_ENV
     - name: adding sdk
       run: |
-           mvn archetype=BrowserStackTestNg -B -DarchetypeGroupId=com.browserstack -DarchetypeArtifactId=testng-archetype-integrate -DarchetypeVersion=1.2 -DgroupId=com.browserstack -DartifactId=testngGithubPOC -Dversion=1.2 -DBROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ -DBROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq
+           mvn archetype:generate -B -DarchetypeGroupId=com.browserstack -DarchetypeArtifactId=testng-archetype-integrate -DarchetypeVersion=1.2 -DgroupId=testNgBS -DartifactId=testNgGithubPOC -Dversion=1.2 -DBROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ -DBROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq
     - name: Run with Maven
       run: mvn test
