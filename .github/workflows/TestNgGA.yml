@@ -4,9 +4,10 @@
 name: Sulagna Maven TestNG project
 
 on:
-  workflow_dispatch:
-  push:
-    branches: ["master"]
+  pull_request:
+    types:
+      - opened
+      - synchronize
 
 jobs:
   build:
