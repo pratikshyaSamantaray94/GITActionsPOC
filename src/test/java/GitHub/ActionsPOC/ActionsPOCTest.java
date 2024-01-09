@@ -17,7 +17,8 @@ public class ActionsPOCTest {
 	    String baseUrl = "https://www.google.com";        
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        driver = new ChromeDriver(options);
+	    WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.get(baseUrl);
         String testTitle = "Free QA Automation Tools For Everyone";
         String originalTitle = driver.getTitle();
