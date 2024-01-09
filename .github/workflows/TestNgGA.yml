@@ -6,7 +6,7 @@ name: Sulagna Maven TestNG project
 on:
   workflow_dispatch:
   push:
-    branches: ["master"]
+    branches: ["Test_for_TestNG"]
 
 jobs:
   build:
