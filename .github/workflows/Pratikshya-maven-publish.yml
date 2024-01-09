@@ -24,7 +24,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: set up env variables
+    - name: set up env variable
       run: |
           echo "BROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ" >> $GITHUB_ENV
           echo "BROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq" >> $GITHUB_ENV
