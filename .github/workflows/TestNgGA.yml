@@ -4,10 +4,9 @@
 name: Sulagna Maven TestNG project
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
+  workflow_dispatch:
+  push:
+    branches: ["Test_for_TestNG"]
 
 jobs:
   build:
