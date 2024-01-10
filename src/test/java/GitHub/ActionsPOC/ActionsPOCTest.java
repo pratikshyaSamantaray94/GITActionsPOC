@@ -16,7 +16,7 @@ public class ActionsPOCTest {
   public void MethodForGitHubAction() throws InterruptedException {
 	    String baseUrl = "https://www.google.com";        
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("--headless=new");
         driver = new ChromeDriver(options);
         driver.get(baseUrl);
         String testTitle = "Free QA Automation Tools For Everyone";
