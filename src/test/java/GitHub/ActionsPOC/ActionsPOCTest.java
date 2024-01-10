@@ -20,7 +20,6 @@ public class ActionsPOCTest {
         String testTitle = "Free QA Automation Tools For Everyone";
         String originalTitle = driver.getTitle();
         System.out.println(originalTitle);
-        
         driver.close();
   }
 }
