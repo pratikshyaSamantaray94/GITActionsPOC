@@ -22,7 +22,7 @@ public class ActionsPOCTest {
   public void MethodForGitHubAction() throws InterruptedException, MalformedURLException {
 	    String baseUrl = "https://www.google.com";        
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
+        options.addArguments("headless");
         driver = new ChromeDriver(options);
         
 //        DesiredCapabilities cap = new DesiredCapabilities(); 
