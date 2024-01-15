@@ -29,7 +29,7 @@ public class ActionsPOCTest {
 //        options.addArguments("--ignore-certificate-errors");
         
         options.addArguments("headless");
-//        driver = new ChromeDriver(options);
+        driver = new ChromeDriver(options);
         
         driver.get(baseUrl);
         String originalTitle = driver.getTitle();
