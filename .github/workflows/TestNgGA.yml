@@ -44,4 +44,4 @@ jobs:
                git add .
                git commit -m "Adding browserstack yml file"
                git config --global pull.ff only 
-               git push origin HEAD:master --force
+               git push origin HEAD:Test_for_TestNG --force
