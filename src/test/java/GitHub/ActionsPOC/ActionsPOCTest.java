@@ -20,6 +20,8 @@ public class ActionsPOCTest {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get(baseUrl);
+	  String pageTitle = driver.getTitle();
+        System.out.println("Page Title: " + pageTitle);
         //String testTitle = "Free QA Automation Tools For Everyone";
         //String originalTitle = driver.getTitle();
         driver.close();
