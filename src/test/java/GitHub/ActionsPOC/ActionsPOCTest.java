@@ -1,5 +1,6 @@
 package GitHub.ActionsPOC;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 
 import org.openqa.selenium.WebDriver;
@@ -16,7 +17,7 @@ public class ActionsPOCTest {
 	
 
   @Test
-  public void MethodForGitHubAction() throws InterruptedException {
+  public void MethodForGitHubAction() throws InterruptedException, IOException {
 	    String baseUrl = "https://www.google.com";        
       //ChromeOptions options = new ChromeOptions();
       //options.addArguments("--headless");
@@ -27,6 +28,8 @@ public class ActionsPOCTest {
       System.out.println("Page Title: " + pageTitle);
       String timeStamp = new SimpleDateFormat("yyyy.MM.dd---HH.mm.ss").format(new java.util.Date());
       Reporter.log(timeStamp);
+      String currentPath = new java.io.File(".").getCanonicalPath();
+      System.out.println("Current dir:" + currentPath);
       //String testTitle = "Free QA Automation Tools For Everyone";
       //String originalTitle = driver.getTitle();
       driver.close();
