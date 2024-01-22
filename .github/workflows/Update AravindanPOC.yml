@@ -30,5 +30,18 @@ jobs:
       run: |
           mvn archetype:generate -B -DarchetypeGroupId=com.browserstack -DarchetypeArtifactId=testng-archetype-integrate -DarchetypeVersion=1.2 -DgroupId=com.browserstack -DartifactId=testng-archetype-integrate -Dversion=1.2 -DBROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ -DBROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq
     
-    - name: Run with Maven
-      run: mvn test
+    - name: Upload yml file
+      uses: actions/upload-artifact@v3
+      with:
+            name: yml
+            path: "browserstack.yml"
+          # Use always() to always run this step to publish test results when there are test failures
+            
+    - name: git action adding test report
+      run: |
+               git config --global user.email "sulagna.chakraborty@onbe.com"
+               git config --global user.name "Sulagna304"
+               git add .
+               git commit -m "Adding browserstack yml file"
+               git config --global pull.ff only 
+               git push origin HEAD:master --force
