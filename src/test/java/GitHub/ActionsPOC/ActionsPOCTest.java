@@ -1,11 +1,13 @@
 package GitHub.ActionsPOC;
 
 import java.net.MalformedURLException;
+import java.text.SimpleDateFormat;
 
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 
@@ -34,6 +36,8 @@ public class ActionsPOCTest {
         driver.get(baseUrl);
         String originalTitle = driver.getTitle();
         System.out.println(originalTitle);
+        String timeStamp = new SimpleDateFormat("yyyy.MM.dd---HH.mm.ss").format(new java.util.Date());
+        Reporter.log(timeStamp);
         driver.close();
   }
 }
