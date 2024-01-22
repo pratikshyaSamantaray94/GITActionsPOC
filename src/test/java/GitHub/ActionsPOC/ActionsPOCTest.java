@@ -30,6 +30,7 @@ public class ActionsPOCTest {
       Reporter.log(timeStamp);
       String currentPath = new java.io.File(".").getCanonicalPath();
       System.out.println("Current dir:" + currentPath);
+      
       //String testTitle = "Free QA Automation Tools For Everyone";
       //String originalTitle = driver.getTitle();
       driver.close();
