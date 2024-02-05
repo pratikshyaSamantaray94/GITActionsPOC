@@ -6,32 +6,44 @@ name: Pratikshya Maven Package
 on:
   workflow_dispatch:
   push:
-    branches: ["master"]
+    branches: ["multipleTestWithJunitReport"]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 11
+    - name: checkout code
       uses: actions/checkout@v4
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
       with:
         java-version: '11'
         distribution: 'temurin'
 
-    - name: set up env variables
-      run: |
-          echo "BROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ" >> $GITHUB_ENV
-          echo "BROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq" >> $GITHUB_ENV
-          
-    - name: adding sdk
-      run: |
-            mvn archetype:generate -B -DarchetypeGroupId=com.browserstack -DarchetypeArtifactId=testng-archetype-integrate -DarchetypeVersion=1.2 -DgroupId=com.browserstack -DartifactId=testng-archetype-integrate -Dversion=1.2 -DBROWSERSTACK_USERNAME=sulagnachakrabor_hF8bLJ -DBROWSERSTACK_ACCESS_KEY=1bt4ji6nzS6ALopzMHZq
-  
     - name: Run with Maven
-      run: mvn test -P sample-test
+      run: mvn test
+      
+    - name: git action adding test report
+      run: |
+          git config --global user.email pratikshya.samantaray@onbe.com         
+          git config --global user.name "pratikshyaSamantaray94"
+          git add target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest.xml
+          git add target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest2.xml
+          git commit -m "Adding junit report folder"
+          git config --global pull.ff only 
+          git push origin HEAD:master --force
+
+     
+   # - name: Upload Junit results in BrowserStack and print the logs in a file
+     # run: |
+       #     curl -u sulagnachakrabor_hF8bLJ:1bt4ji6nzS6ALopzMHZq -F 'data=@"TEST-GitHub.ActionsPOC.ActionsPOCTest.xml"' -F "projectName=TestNg Test Project" -F "buildName=Sample Build 2" https://upload-observability.browserstack.com/upload
+ #   - name: Upload jUnit test results
+   #   uses: actions/upload-artifact@v4
+  #    with:
+      #      name: jUnitReportTestNgxml
+       #     path: "target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest.xml"  
