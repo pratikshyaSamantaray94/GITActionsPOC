@@ -32,8 +32,7 @@ jobs:
       run: |
           git config --global user.email pratikshya.samantaray@onbe.com         
           git config --global user.name "pratikshyaSamantaray94"
-          git add target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest.xml
-          git add target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest2.xml
+          git add target/surefire-reports/Suite/POCxml.xml
           git commit -m "Adding junit report folder"
           git config --global pull.ff only 
           git push origin HEAD:multipleTestWithJunitReport --force
@@ -46,4 +45,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
             name: jUnitReportTestNgxml
-            path: "target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest.xml"  
+            path: "target/surefire-reports/Suite/POCxml.xml"  
