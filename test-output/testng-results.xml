@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14611" started-at="2023-12-22T12:33:52Z" finished-at="2023-12-22T12:34:07Z">
+  <suite name="Suite" duration-ms="19942" started-at="2024-02-05T10:08:28Z" finished-at="2024-02-05T10:08:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14611" started-at="2023-12-22T12:33:52Z" finished-at="2023-12-22T12:34:07Z">
-      <class name="GitHub.ActionsPOC.ActionsPOCTest">
-        <test-method status="PASS" signature="NewTestActionsPOC()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest@5f2108b5]" name="NewTestActionsPOC" duration-ms="14584" started-at="2023-12-22T18:03:52Z" finished-at="2023-12-22T18:04:07Z">
+    <test name="Test" duration-ms="19942" started-at="2024-02-05T10:08:28Z" finished-at="2024-02-05T10:08:48Z">
+      <class name="GitHub.ActionsPOC.ActionsPOCTest2">
+        <test-method status="PASS" signature="MethodForGitHubActionTest2()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest2@5c90e579]" name="MethodForGitHubActionTest2" duration-ms="11018" started-at="2024-02-05T15:38:37Z" finished-at="2024-02-05T15:38:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewTestActionsPOC -->
+        </test-method> <!-- MethodForGitHubActionTest2 -->
+      </class> <!-- GitHub.ActionsPOC.ActionsPOCTest2 -->
+      <class name="GitHub.ActionsPOC.ActionsPOCTest">
+        <test-method status="PASS" signature="MethodForGitHubAction()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest@4e3958e7]" name="MethodForGitHubAction" duration-ms="8909" started-at="2024-02-05T15:38:28Z" finished-at="2024-02-05T15:38:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MethodForGitHubAction -->
       </class> <!-- GitHub.ActionsPOC.ActionsPOCTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

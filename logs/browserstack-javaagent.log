@@ -1,0 +1,16 @@
+17:31:54.795 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.11.0
+17:31:54.801 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 
+17:31:55.416 [main] INFO  c.browserstack.utils.UtilityMethods - BrowserStack Yml Detected : C:\browserstack.yml
+17:31:55.416 [main] ERROR c.b.config.BrowserStackConfig - [Invalid Path] Config file does not exist at any parent directory of C:\Users\PSamantaray\eclipse-workspace-onbe\ActionsPOC. Please include a browserstack.yml/browserstack.yaml file containing configuration for tests.
+17:31:55.417 [main] ERROR c.browserstack.BrowserStackJavaAgent - Something went wrong - java.lang.RuntimeException: [Invalid Path] Config file does not exist at any parent directory of C:\Users\PSamantaray\eclipse-workspace-onbe\ActionsPOC. Please include a browserstack.yml/browserstack.yaml file containing configuration for tests.
+	at com.browserstack.config.BrowserStackConfig.getInstance(Unknown Source)
+	at com.browserstack.BrowserStackJavaAgent.b(Unknown Source)
+	at com.browserstack.BrowserStackJavaAgent.a(Unknown Source)
+	at com.browserstack.BrowserStackJavaAgent.premain(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(Unknown Source)
+	at sun.instrument.InstrumentationImpl.loadClassAndCallPremain(Unknown Source)
+

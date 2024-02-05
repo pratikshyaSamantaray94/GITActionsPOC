@@ -4,6 +4,7 @@
   <test name="POCxml">
     <classes>
       <class name="GitHub.ActionsPOC.ActionsPOCTest"/>
+      <class name="GitHub.ActionsPOC.ActionsPOCTest2"/>
     </classes>
   </test> <!-- POCxml -->
 </suite> <!-- Suite -->

@@ -7,14 +7,14 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ActionsPOCTest {
+public class ActionsPOCTest2 {
 	
   static WebDriver driver;
 	
 
   @Test
-  public void MethodForGitHubAction() throws InterruptedException {
-	    String baseUrl = "https://www.google.com";        
+  public void MethodForGitHubActionTest2() throws InterruptedException {
+	    String baseUrl = "https://app.bugbug.io/sign-up/";        
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless=new");
         driver = new ChromeDriver(options);
