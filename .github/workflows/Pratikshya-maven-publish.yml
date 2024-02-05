@@ -36,14 +36,14 @@ jobs:
           git add target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest2.xml
           git commit -m "Adding junit report folder"
           git config --global pull.ff only 
-          git push origin HEAD:master --force
+          git push origin HEAD:multipleTestWithJunitReport --force
 
      
    # - name: Upload Junit results in BrowserStack and print the logs in a file
      # run: |
        #     curl -u sulagnachakrabor_hF8bLJ:1bt4ji6nzS6ALopzMHZq -F 'data=@"TEST-GitHub.ActionsPOC.ActionsPOCTest.xml"' -F "projectName=TestNg Test Project" -F "buildName=Sample Build 2" https://upload-observability.browserstack.com/upload
- #   - name: Upload jUnit test results
-   #   uses: actions/upload-artifact@v4
-  #    with:
-      #      name: jUnitReportTestNgxml
-       #     path: "target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest.xml"  
+    - name: Upload jUnit test results
+      uses: actions/upload-artifact@v4
+      with:
+            name: jUnitReportTestNgxml
+            path: "target/surefire-reports/junitreports/TEST-GitHub.ActionsPOC.ActionsPOCTest.xml"  
