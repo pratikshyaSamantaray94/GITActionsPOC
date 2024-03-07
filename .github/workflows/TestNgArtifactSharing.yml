@@ -32,10 +32,10 @@ jobs:
       run: |
           git config --global user.email pratikshya.samantaray@onbe.com         
           git config --global user.name "pratikshyaSamantaray94"
-          git add test-output/emailable-report.html
+          git add "test-output/emailable-report.html"
           git commit -m "adding latest emailable reports"
           git config --global pull.ff only 
-          git push origin HEAD:main --force 
+          git push origin HEAD:master --force 
                
     - name: Upload HTML test results
       uses: actions/upload-artifact@v4
