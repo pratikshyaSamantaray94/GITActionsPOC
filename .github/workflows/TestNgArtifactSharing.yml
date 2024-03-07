@@ -23,16 +23,11 @@ jobs:
         distribution: 'temurin'
 
     - name: Run with Maven
+      continue-on-error: true
       run: mvn test
 
-  deploy:
-    runs-on: windows-latest
-
-    needs: build
-
-    steps:
-      - name: git action adding test report
-        run: |
+    - name: git action adding test report
+      run: |
                git config --global user.email pratikshya.samantaray@onbe.com         
                git config --global user.name "pratikshyaSamantaray94"
                git add "target/surefire-reports/emailable-report.html"
@@ -40,13 +35,12 @@ jobs:
                git config --global pull.ff only 
                git push origin HEAD:master --force 
                
-      - name: Upload HTML test results
-        uses: actions/upload-artifact@v4
-        with:
+    - name: Upload HTML test results
+      uses: actions/upload-artifact@v4
+      with:
            name: HTMLReport
            path: "target/surefire-reports/emailable-report.html" 
-
-    options:
-           continue-on-error: true
+           
+   
  
 
