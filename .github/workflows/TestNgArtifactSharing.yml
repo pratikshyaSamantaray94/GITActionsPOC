@@ -32,7 +32,7 @@ jobs:
       run: |
           git config --global user.email pratikshya.samantaray@onbe.com         
           git config --global user.name "pratikshyaSamantaray94"
-          git add "test-output/emailable-report.html"
+          git add "target/surefire-reports/emailable-report.html"
           git commit -m "adding latest emailable reports"
           git config --global pull.ff only 
           git push origin HEAD:master --force 
@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
            name: HTMLReport
-           path: "test-output/emailable-report.html" 
+           path: "target/surefire-reports/emailable-report.html" 
