@@ -13,7 +13,7 @@ public class ActionsPOCTest {
 	
 
   @Test
-  public void MethodForGitHubAction() throws InterruptedException {
+  public void openLandingPage() throws InterruptedException {
 	    String baseUrl = "https://www.google.com";        
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless=new");
