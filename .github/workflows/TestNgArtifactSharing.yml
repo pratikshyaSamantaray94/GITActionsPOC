@@ -32,7 +32,7 @@ jobs:
 
     steps:
       - name: git action adding test report
-         run:|
+        run: |
                git config --global user.email pratikshya.samantaray@onbe.com         
                git config --global user.name "pratikshyaSamantaray94"
                git add "target/surefire-reports/emailable-report.html"
