@@ -40,11 +40,10 @@ jobs:
                git push origin HEAD:master --force 
                
     - name: Upload HTML test results
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v4 > logs.txt
       with:
            name: HTMLReport
-           path: "target/surefire-reports/emailable-report.html" > logs.txt
-   
+           path: "target/surefire-reports/emailable-report.html" 
     - name: Get Artifact ID
       id: get_artifact_id
       run: |
