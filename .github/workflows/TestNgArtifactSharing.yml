@@ -44,15 +44,19 @@ jobs:
       with:
            name: HTMLReport
            path: "target/surefire-reports/emailable-report.html" 
-           
+
+  deploy:
+
+    runs-on: windows-latest
+    steps:         
     - name: Get Artifact ID
       id: get_artifact_id
       run: |
-             ARTIFACT_ID=$(curl -s -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts"| jq -r '.artifacts[0].id')
+                ARTIFACT_ID=$(curl -s -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" \
+                        "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
+                        | jq -r '.artifacts[0].id')
+                echo "ARTIFACT_ID=$ARTIFACT_ID" >> $GITHUB_ENV
 
-             # Extract the artifact ID from the response
-             #ARTIFACT_ID=$(echo "$response" | jq -r '.artifacts[0].id')
-             echo "ARTIFACT_ID=$ARTIFACT_ID" >> $GITHUB_ENV
         
     - name: Get artifact link
       run: echo "ARTIFACT_LINK={https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts/${ARTIFACT_ID}}" >> $GITHUB_ENV
