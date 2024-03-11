@@ -43,18 +43,16 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
            name: HTMLReport
-           path: "target/surefire-reports/emailable-report.html" 
+           path: "target/surefire-reports/emailable-report.html" > logs.txt
    
     - name: Get Artifact ID
       id: get_artifact_id
       run: |
-            #"ARTIFACT_ID=$(curl -s -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts"
-            echo "ARTIFACT_ID=$(curl -s -H "Authorization: Bearer ${{secrets.GITHUB_TOKEN}}" \"https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \| jq -r '.artifacts[0].id')" >> $GITHUB_OUTPUT
-            #echo "ARTIFACT_ID=$ARTIFACT_ID" >> $GITHUB_ENV
-
+             echo "ARTIFACT_ID=$(grep -oP 'Artifact ID \K\d+' logs.txt)" >> $GITHUB_ENV
+             #echo "ARTIFACT_ID=$(echo "$my_var" | tr -d '"')" >> $GITHUB_ENV
         
     - name: Get artifact link
-      run: echo "ARTIFACT_LINK={https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts/${{ steps.get_artifact_id.outputs.ARTIFACT_ID }}}" >> $GITHUB_ENV
+      run: echo "ARTIFACT_LINK={https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts/${ARTIFACT_ID}}" >> $GITHUB_ENV
        
     - name: Output artifact link
       run: echo "$ARTIFACT_LINK"
