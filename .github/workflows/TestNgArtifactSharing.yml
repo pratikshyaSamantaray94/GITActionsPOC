@@ -85,7 +85,7 @@ jobs:
       uses: atlassian/gajira-comment@v3
       with:
            issue: ${{ steps.get-issue-key.outputs.issue-key }}
-           comment: Check Report in the git artifact link ${{ env.ARTIFACT_LINK }}.
+           comment: Check TestNg Html Report in the git artifact link ${{ env.ARTIFACT_LINK }}.
            
            
    
