@@ -1,6 +1,6 @@
 
 
-name: TestNg Artifact 
+name: TestNg Artifact Report in Jira
 
 on: 
   pull_request:
