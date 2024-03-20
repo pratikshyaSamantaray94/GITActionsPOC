@@ -4,7 +4,7 @@ name: TestNg Scheduler
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Runs the pipeline every 5 minutes
+    - cron: '*/1 * * * *'  # Runs the pipeline every 5 minutes
 
 jobs:
   build:
