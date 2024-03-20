@@ -1,6 +1,6 @@
 
 
-name: TestNg Artifact Report in Jira
+name: TestNg Scheduler
 
 on:
   schedule:
