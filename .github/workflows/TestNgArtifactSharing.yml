@@ -1,6 +1,6 @@
 
 
-name: TestNg Artifact Report in Jira
+name: TestNg Artifact github Report in Jira
 
 on: 
   pull_request:
