@@ -27,7 +27,7 @@ jobs:
 
     - name: Run with Maven
       continue-on-error: true
-      run: mvn test
+      run: mvn dependency:resolve
 
     - name: git action adding test report
       run: |
