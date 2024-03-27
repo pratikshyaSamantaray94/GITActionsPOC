@@ -1,12 +1,10 @@
 
 
-name: TestNg Artifact github Report in Jira
+name: TestNg Scheduler
 
-on: 
-  pull_request:
-    types:
-      - opened
-      - synchronize
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Runs the pipeline every 5 minutes
 
 jobs:
   build:
@@ -67,7 +65,7 @@ jobs:
     - name: Get Jira issue key
       id: get-issue-key
       run: | 
-            title="${{ github.event.pull_request.title }}"
+            title="AA-617"
                IFS='|' read -ra title_parts <<< "$title"
                echo "issue-key=$(echo ${title_parts[0]} | sed 's/^\\[\\(\\w\\+-\\d+\\)\\].*/\\1/')" >> $GITHUB_OUTPUT
     
@@ -88,7 +86,3 @@ jobs:
            issue: ${{ steps.get-issue-key.outputs.issue-key }}
            comment: Check TestNg Html Report in the git artifact link ${{ env.ARTIFACT_LINK }}.
            
-           
-   
- 
-
