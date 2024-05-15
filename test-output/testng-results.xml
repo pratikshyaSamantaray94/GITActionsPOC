@@ -1,23 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="19942" started-at="2024-02-05T10:08:28Z" finished-at="2024-02-05T10:08:48Z">
+  <suite started-at="2024-05-16T00:19:51 IST" name="Suite" finished-at="2024-05-16T00:20:15 IST" duration-ms="24389">
     <groups>
     </groups>
-    <test name="Test" duration-ms="19942" started-at="2024-02-05T10:08:28Z" finished-at="2024-02-05T10:08:48Z">
+    <test started-at="2024-05-16T00:19:51 IST" name="POCxml" finished-at="2024-05-16T00:20:15 IST" duration-ms="24389">
       <class name="GitHub.ActionsPOC.ActionsPOCTest2">
-        <test-method status="PASS" signature="MethodForGitHubActionTest2()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest2@5c90e579]" name="MethodForGitHubActionTest2" duration-ms="11018" started-at="2024-02-05T15:38:37Z" finished-at="2024-02-05T15:38:48Z">
+        <test-method signature="openLandingPageWithAssert()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest2@20a8a64e]" started-at="2024-05-16T00:20:03 IST" name="openLandingPageWithAssert" finished-at="2024-05-16T00:20:15 IST" duration-ms="12268" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Get started with new title - BugBug.io] but found [Get started with BugBug - BugBug.io]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Get started with new title - BugBug.io] but found [Get started with BugBug - BugBug.io]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at GitHub.ActionsPOC.ActionsPOCTest2.openLandingPageWithAssert(ActionsPOCTest2.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MethodForGitHubActionTest2 -->
+        </test-method> <!-- openLandingPageWithAssert -->
       </class> <!-- GitHub.ActionsPOC.ActionsPOCTest2 -->
       <class name="GitHub.ActionsPOC.ActionsPOCTest">
-        <test-method status="PASS" signature="MethodForGitHubAction()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest@4e3958e7]" name="MethodForGitHubAction" duration-ms="8909" started-at="2024-02-05T15:38:28Z" finished-at="2024-02-05T15:38:37Z">
+        <test-method signature="openLandingPage()[pri:0, instance:GitHub.ActionsPOC.ActionsPOCTest@40cb698e]" started-at="2024-05-16T00:19:51 IST" name="openLandingPage" finished-at="2024-05-16T00:20:03 IST" duration-ms="12062" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- MethodForGitHubAction -->
+        </test-method> <!-- openLandingPage -->
       </class> <!-- GitHub.ActionsPOC.ActionsPOCTest -->
-    </test> <!-- Test -->
+    </test> <!-- POCxml -->
   </suite> <!-- Suite -->
 </testng-results>

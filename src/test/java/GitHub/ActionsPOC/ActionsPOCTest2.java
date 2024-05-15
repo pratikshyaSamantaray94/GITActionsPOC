@@ -17,7 +17,6 @@ public class ActionsPOCTest2 {
   public void openLandingPageWithAssert() throws InterruptedException {
 	String baseUrl = "https://app.bugbug.io/sign-up/";        
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless=new");
         driver = new ChromeDriver(options);
         driver.get(baseUrl);
 	    String expectedTitle = "Get started with new title - BugBug.io";
