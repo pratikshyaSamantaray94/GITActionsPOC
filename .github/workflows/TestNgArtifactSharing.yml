@@ -1,5 +1,3 @@
-
-
 name: TestNg Artifact github Report in JiraNew
 
 on: 
@@ -39,10 +37,15 @@ jobs:
                git commit -m "adding latest emailable reports"
                git config --global pull.ff only 
                git push origin HEAD:master --force 
-    - name: Pull HTML report
-      run: |  
-           rm target/surefire-reports/emailable-report.html  
-           mv target/surefire-reports/emailable-report.html   
+               
+    - name: Copy HTML report
+      run: |
+        mkdir -p html_report
+        cp target/surefire-reports/emailable-report.html html_report/
+      
+    - name: Move HTML report to root
+      run: |
+        mv html_report/*.html . 
            
     - name: Commit and push changes
       run:  |         
