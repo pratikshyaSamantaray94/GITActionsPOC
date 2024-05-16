@@ -45,7 +45,7 @@ jobs:
       
     - name: Move HTML report to root
       run: |
-        mv target/surefire-reports/emailable-report.html .
+        mv -f target/surefire-reports/emailable-report.html .
            
     - name: Commit and push changes
       run:  |         
