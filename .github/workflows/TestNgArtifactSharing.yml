@@ -41,8 +41,8 @@ jobs:
                git push origin HEAD:master --force 
     - name: Pull HTML report
       run: |  
-           rm test-output/emailable-report.html  
-           mv test-output/emailable-report.html   
+           rm target/surefire-reports/emailable-report.html  
+           mv target/surefire-reports/emailable-report.html   
            
     - name: Commit and push changes
       run:  |         
