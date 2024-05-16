@@ -40,7 +40,8 @@ jobs:
                git config --global pull.ff only 
                git push origin HEAD:master --force 
     - name: Pull HTML report
-      run: |                
+      run: |  
+           rm test-output/emailable-report.html  
            mv test-output/emailable-report.html   
            
     - name: Commit and push changes
