@@ -39,12 +39,25 @@ jobs:
                git commit -m "adding latest emailable reports"
                git config --global pull.ff only 
                git push origin HEAD:master --force 
-               
+    - name: Pull HTML report
+      run: |         
+           mkdir -p html_report         
+           mv test-output/emailable-report.html html_report/    
+           
+    - name: Commit and push changes
+      run:  |         
+            git config --global user.name "${{ secrets.GITHUBEMAIL }}"         
+            git config --global user.email "${{ secrets.GITHUBUSERNAME }}"         
+            git add "html_report"         
+            git commit -m "Pull HTML report from test-output folder"  
+            git config --global pull.ff only
+            git push origin HEAD:master --force    
+            
     - name: Upload HTML test results
       uses: actions/upload-artifact@v4
       with:
            name: HTMLReport
-           path: "target/surefire-reports/emailable-report.html" 
+           path: "html_report.html" 
 
   deploy:
 
