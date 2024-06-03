@@ -9,36 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">POCxml</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">195,978</td><td></td><td></td></tr>
+<tr><td><a href="#t0">POCxml</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">99,621</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">POCxml &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest2</td><td><a href="#m0">openLandingPageWithAssert</a></td><td rowspan="1">1717440783064</td><td rowspan="1">180963</td></tr><tr><th colspan="4">POCxml &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest</td><td><a href="#m1">openLandingPage</a></td><td rowspan="1">1717440768069</td><td rowspan="1">14989</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">POCxml &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest2</td><td><a href="#m0">openLandingPageWithAssert</a></td><td rowspan="1">1717441406303</td><td rowspan="1">5941</td></tr><tr><th colspan="4">POCxml &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest</td><td><a href="#m1">openLandingPage</a></td><td rowspan="1">1717441312691</td><td rowspan="1">93609</td></tr></tbody>
 </table>
-<h2>POCxml</h2><h3 id="m0">GitHub.ActionsPOC.ActionsPOCTest2#openLandingPageWithAssert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
-Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
-System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.23&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [98112189fc9986a9dfae62b0a350c2de, get {url=https://app.bugbug.io/sign-up/}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.208, chrome: {chromedriverVersion: 124.0.6367.207 (a9001a6e39f..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59798}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59798/devtoo..., se:cdpVersion: 124.0.6367.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 98112189fc9986a9dfae62b0a350c2de
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:65)
-	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
-	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.execute(NettyHttpHandler.java:48)
-	at org.openqa.selenium.remote.http.netty.NettyClient.execute(NettyClient.java:96)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:300)
-	at GitHub.ActionsPOC.ActionsPOCTest2.openLandingPageWithAssert(ActionsPOCTest2.java:22)
+<h2>POCxml</h2><h3 id="m0">GitHub.ActionsPOC.ActionsPOCTest2#openLandingPageWithAssert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Get started with new title - BugBug.io] but found [Get started with BugBug - BugBug.io]
+	at GitHub.ActionsPOC.ActionsPOCTest2.openLandingPageWithAssert(ActionsPOCTest2.java:25)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1892)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2027)
-	at org.asynchttpclient.netty.NettyResponseFuture.get(NettyResponseFuture.java:206)
-	at org.openqa.selenium.remote.http.netty.NettyHttpHandler.makeCall(NettyHttpHandler.java:59)
-	... 42 more
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">GitHub.ActionsPOC.ActionsPOCTest#openLandingPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
