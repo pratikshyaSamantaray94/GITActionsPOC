@@ -9,14 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">POCxml</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">17,763</td><td></td><td></td></tr>
+<tr><td><a href="#t0">POCxml</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">131,328</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">POCxml &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest2</td><td><a href="#m0">openLandingPageWithAssert</a></td><td rowspan="1">1717689552746</td><td rowspan="1">4128</td></tr><tr><th colspan="4">POCxml &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest</td><td><a href="#m1">openLandingPage</a></td><td rowspan="1">1717689539147</td><td rowspan="1">13583</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">POCxml &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest</td><td><a href="#m0">openLandingPage</a></td><td rowspan="1">1717690969607</td><td rowspan="1">99719</td></tr><tr class="failedodd"><td rowspan="1">GitHub.ActionsPOC.ActionsPOCTest2</td><td><a href="#m1">openLandingPageWithAssert</a></td><td rowspan="1">1717691069326</td><td rowspan="1">31591</td></tr></tbody>
 </table>
-<h2>POCxml</h2><h3 id="m0">GitHub.ActionsPOC.ActionsPOCTest2#openLandingPageWithAssert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Get started with new title - BugBug.io] but found [Get started with BugBug - BugBug.io]
+<h2>POCxml</h2><h3 id="m0">GitHub.ActionsPOC.ActionsPOCTest#openLandingPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: chrome not reachable 
+Host info: host: &apos;fv-az1347-955&apos;, ip: &apos;10.1.0.34&apos;
+Build info: version: &apos;4.11.0&apos;, revision: &apos;040bc5406b&apos;
+System info: os.name: &apos;Windows Server 2022&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.23&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--remote-allow-origins=*], binary: C:\Program Files\Google\Chr..., extensions: []}}]}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:140)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:96)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:68)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:232)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:159)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:108)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at GitHub.ActionsPOC.ActionsPOCTest.openLandingPage(ActionsPOCTest.java:20)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">GitHub.ActionsPOC.ActionsPOCTest2#openLandingPageWithAssert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Get started with new title - BugBug.io] but found [Get started with BugBug - BugBug.io]
 	at GitHub.ActionsPOC.ActionsPOCTest2.openLandingPageWithAssert(ActionsPOCTest2.java:25)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 ... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">GitHub.ActionsPOC.ActionsPOCTest#openLandingPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
